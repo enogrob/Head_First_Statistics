@@ -1,0 +1,6 @@
+```{r}
+profit <- c(2.0, 2.1, 2.2, 2.1, 2.3, 2.4)
+month <- c("Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+profitbyMonth <- data.frame(month, profit)
+profitbyMonth
+```

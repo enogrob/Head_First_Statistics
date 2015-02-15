@@ -1,6 +1,15 @@
 ```{r}
 profit <- c(2.0, 2.1, 2.2, 2.1, 2.3, 2.4)
-month <- c("Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+month <- c(7, 8, 9, 10, 11, 12)
 profitbyMonth <- data.frame(month, profit)
 profitbyMonth
+str(profitbyMonth)
+```
+```{r}
+plot(profitbyMonth$profit~profitbyMonth$month,
+   type="l",
+   main="Company Profit per Month",
+   xlab="Month",
+   ylab="Profit(millions of dollars)",
+   col="blue")
 ```

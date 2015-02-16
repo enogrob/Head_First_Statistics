@@ -1,9 +1,15 @@
+![](images/head_first_statistics.png)
+
+### Head First Statistics
+
+***
+
+#### 1. Visualizing Information
+A tale of two charts
 ```{r}
 profit <- c(2.0, 2.1, 2.2, 2.1, 2.3, 2.4)
 month <- c(7, 8, 9, 10, 11, 12)
 profitbyMonth <- data.frame(month, profit)
-profitbyMonth
-str(profitbyMonth)
 ```
 ```{r}
 plot(profitbyMonth$profit~profitbyMonth$month,

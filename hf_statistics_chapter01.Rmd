@@ -1,0 +1,45 @@
+![](images/head_first_statistics.png)
+
+### Head First Statistics
+
+***
+
+#### 1. Visualizing Information
+A tale of two charts
+```{r}
+profit <- c(2.0, 2.1, 2.2, 2.1, 2.3, 2.4)
+month <- month.abb[7:12]
+profitPerMonth <- data.frame(month, profit)
+```
+```{r}
+plot(profitPerMonth$profit,
+   xaxt = "n",
+   type="l",
+   main="Company Profit per Month",
+   xlab="Month",
+   ylab="Profit(millions of dollars)",
+   col="blue")
+axis(1, at=1:6, labels=month.abb[7:12])
+```
+
+Manic Mango
+```{r}
+genre <- c("Sports", "Strategy", "Action", "Shooter", "Other")
+units_sold <- c(27500, 11500, 6000, 3500, 1500)
+manic_mango <- data.frame(genre, units_sold)
+```
+```{r}
+pie(units_sold, labels = genre, main="Manic Mango")
+```
+```{r}
+pct <- round(units_sold/sum(units_sold)*100)
+genre <- paste(genre, pct) # add percents to labels 
+genre <- paste(genre,"%",sep="") # ad % to labels 
+pie(units_sold,labels = genre, main="Manic Mango")
+```
+
+<http://www.statmethods.net/graphs/bar.html>
+```{r}
+counts <- table(mtcars$gear)
+barplot(counts, main="Car Distribution", xlab="Manic Mango")
+```
